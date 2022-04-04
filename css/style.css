@@ -32,11 +32,34 @@ main{
 main .row{
     width: 550px;
 }
+/* Easy */
 .col{
     padding: 15px 18px;
     border: 2px solid black;
     width: 55px;
     height: 55px;
+}
+/* Easy */
+
+/* Hard */
+.col-1{
+    padding: 15px 26px;
+    border: 2px solid black;
+    width: 55px;
+    height: 61px;
+}
+/* Hard */
+
+/* Crazy */
+.col-{
+    padding: 29px 33px;
+    border: 3px solid black;
+    width: 67px;
+    height: 79px;
+}
+/* Crazy */
+.active{
+    background-color:aqua
 }
 footer{
     width: 100%;
