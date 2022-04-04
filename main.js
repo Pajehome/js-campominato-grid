@@ -4,10 +4,11 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-function active() {
-    let bgBlue = document.querySelector(".col");
-    bgBlue.classList.add("active");
- }
+// function active() {
+//      let bgBlue = document.querySelectorAll(".col");
+//      bgBlue.classList.add("active");
+   
+//  }
 
   
 
@@ -45,7 +46,7 @@ const colEasy = 100
  }
 
  document.getElementById('generate').addEventListener('click', easy);
- document.getElementsByClassName("col").addEventListener("click", active);
+//  document.getElementsByClassName("col").addEventListener("click", active);
  
  function hard() {
     let container = document.querySelector('main');
@@ -117,3 +118,25 @@ function colonneCrazy() {
 
 
 
+//  const casella = document.querySelectorAll('.col')
+//  for(i=0; i < casella.length; c++){
+//      let a = i
+//      casella[i].addEventListener('click', function(){
+//         casella[a].classList.add('active')
+//          console.log(casella[d])
+//      })
+//      console.log(a)
+//  }
+
+function coloraSfondo(){
+  const coloraCelle = document.querySelectorAll(".col");
+  return coloraCelle;
+}
+let colora = coloraSfondo();
+console.log(colora);
+
+for(let i = 0; i < colora.length; i++){
+  colora[i].addEventListener('click', function(){
+     colora[i].classList.add('active');
+  })
+} 
