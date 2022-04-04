@@ -8,9 +8,12 @@ function getRandomInt(min, max) {
 
 function griglia() {
      let container = document.querySelector('main');
-     container.setAttribute('class', 'container');
+     
+
      let row = document.createElement('div');
      row.setAttribute('class', 'row');
+     console.log(row)
+
      let colsCreate = creaColonne();
      console.log(colsCreate);
      row.innerHTML = colsCreate;
@@ -18,7 +21,7 @@ function griglia() {
      console.log(row);
 }
 
-griglia()
+
 
 
 const colEasy = 100
@@ -27,11 +30,12 @@ const colEasy = 100
  function creaColonne() {
    let cols = '';
    let numeriusati = [];
-   for(let i = 0; i <= colEasy.length; i++){ 
+   for(let i = 1; i <= colEasy; i++){ 
       cols += `
-     <div class="col"> ${1}</div>
+     <div class="col"> ${i}</div>
      `;
     }
+  return cols
  }
 
  document.getElementById('generate').addEventListener('click', griglia);

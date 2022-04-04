@@ -24,11 +24,21 @@ header{
 width:60px
 }
 main{
-    height: calc(100vh - 170px);
+    height: calc(100vh - 164px);
     background-color: beige;
+    justify-content: center;
+    display: flex;
 }
-
+main .row{
+    width: 550px;
+}
+.col{
+    padding: 15px 18px;
+    border: 2px solid black;
+    width: 55px;
+    height: 55px;
+}
 footer{
     width: 100%;
-    height: 50px;
+    height: 44px;
 }
