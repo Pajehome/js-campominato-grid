@@ -168,7 +168,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-function setLevel() {
+function setLevel(vincere) {
   const level = document.getElementById("level").value;
   console.log("livello selezionato: ", level);
   let numSquare;
@@ -206,7 +206,6 @@ const bombs = [];
 let max_attempt;
 let attempts = 0;
 
-
 function generaGriglia(numSquare, squareperSide) {
   console.log("numero di celle totali: ", numSquare);
   const app = document.getElementById("app");
@@ -230,23 +229,25 @@ function generaCella(numSquare, squareperSide) {
   return square;
 }
 function coloraCella() {
-  
+  let perso = document.createElement("div");
+  perso.innerHTML = "";
   let num = parseInt(this.innerText);
   attempts++;
   if (bombs.includes(num)) {
     this.style.backgroundColor = "red";
     this.innerHTML = `<img class= slap src="img/slap.png">`;
-    gameOver();
+    gameOver(perso);
   } else {
     this.style.backgroundColor = "#6495ed";
   }
   this.classList.remove("pointer");
   this.removeEventListener("click", coloraCella);
+  
   app.append(perso)
+  console.log(perso)
 }
-function gameOver(numSquare) {
+function gameOver(perso) {
  console.log("boom")
- let perso = document.createElement('div')
  perso.innerHTML =  `<span>Hai perso ,i tuoi tentativi : ${attempts}</span>`
  return perso
 }
